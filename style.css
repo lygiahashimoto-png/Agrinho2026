@@ -1,0 +1,305 @@
+/* ===========================
+   ESTILO GERAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#FFFBEA;
+    color:#333;
+    transition:0.4s;
+}
+
+/* ===========================
+   CABEÇALHO
+=========================== */
+
+header{
+    background:#F4C542;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+header h1{
+    color:#3A2E00;
+}
+
+nav{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    text-decoration:none;
+    color:#222;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:white;
+    transform:scale(1.1);
+}
+
+#modoEscuro{
+    padding:10px 15px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#333;
+    color:white;
+}
+
+/* ===========================
+   BANNER
+=========================== */
+
+.banner{
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(#FFE066,#FFFBEA);
+}
+
+.banner h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.banner p{
+    max-width:700px;
+    margin:auto;
+    font-size:20px;
+}
+
+.banner button{
+    margin-top:30px;
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    background:#F4C542;
+    font-size:18px;
+    transition:.3s;
+}
+
+.banner button:hover{
+    transform:scale(1.05);
+}
+
+/* ===========================
+   SEÇÕES
+=========================== */
+
+section{
+    padding:70px 30px;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#D48A00;
+}
+
+/* ===========================
+   POLINIZAÇÃO
+=========================== */
+
+.florArea{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    margin-top:30px;
+}
+
+#abelha{
+    font-size:45px;
+    transition:1.2s;
+}
+
+#flor{
+    font-size:55px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#flor:hover{
+    transform:scale(1.2);
+}
+
+#mensagemPolinizacao{
+    text-align:center;
+    margin-top:20px;
+    font-weight:bold;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    width:180px;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+    transition:.3s;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* ===========================
+   LISTAS
+=========================== */
+
+ul{
+    max-width:700px;
+    margin:auto;
+    line-height:2;
+}
+
+/* ===========================
+   QUIZ
+=========================== */
+
+#quiz{
+    text-align:center;
+}
+
+#quiz button{
+    margin:10px;
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#F4C542;
+    transition:.3s;
+}
+
+#quiz button:hover{
+    transform:scale(1.08);
+}
+
+/* ===========================
+   CONTATO
+=========================== */
+
+#contato{
+    text-align:center;
+}
+
+input{
+    padding:12px;
+    width:250px;
+    margin:15px;
+    border-radius:10px;
+    border:1px solid #999;
+}
+
+#contato button{
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#F4C542;
+}
+
+/* ===========================
+   RODAPÉ
+=========================== */
+
+footer{
+    background:#F4C542;
+    padding:25px;
+    text-align:center;
+    margin-top:50px;
+}
+
+/* ===========================
+   MODO ESCURO
+=========================== */
+
+.dark{
+    background:#1E1E1E;
+    color:white;
+}
+
+.dark header{
+    background:#222;
+}
+
+.dark footer{
+    background:#222;
+}
+
+.dark .card{
+    background:#333;
+    color:white;
+}
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+}
+
+nav{
+    justify-content:center;
+    margin:20px 0;
+}
+
+.banner h2{
+    font-size:30px;
+}
+
+.banner p{
+    font-size:18px;
+}
+
+.florArea{
+    flex-direction:column;
+}
+
+.cards{
+    flex-direction:column;
+    align-items:center;
+}
+
+.card{
+    width:90%;
+}
+
+}

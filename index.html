@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte - A Importância das Abelhas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🐝 Agro Forte</h1>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#polinizacao">Polinização</a>
+        <a href="#alimentos">Alimentos</a>
+        <a href="#curiosidades">Curiosidades</a>
+        <a href="#ameacas">Ameaças</a>
+        <a href="#ajudar">Como ajudar</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <button id="modoEscuro">🌙 Modo Escuro</button>
+</header>
+
+<main>
+
+<section id="inicio" class="banner">
+    <h2>Agro Forte, Futuro Sustentável</h2>
+
+    <p>
+        As abelhas são essenciais para a produção de alimentos,
+        para a agricultura e para o equilíbrio do meio ambiente.
+    </p>
+
+    <button onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">
+        Começar
+    </button>
+</section>
+
+<section id="sobre">
+    <h2>🐝 Sobre as Abelhas</h2>
+
+    <p>
+        As abelhas são insetos polinizadores responsáveis por ajudar milhares de plantas
+        a produzir frutos e sementes. Sem elas, muitos alimentos desapareceriam.
+    </p>
+</section>
+
+<section id="polinizacao">
+    <h2>🌸 Polinização</h2>
+
+    <p>
+        Clique na flor para ajudar a abelha a fazer a polinização.
+    </p>
+
+    <div class="florArea">
+
+        <div id="abelha">
+            🐝
+        </div>
+
+        <button id="flor">
+            🌼
+        </button>
+
+    </div>
+
+    <p id="mensagemPolinizacao"></p>
+
+</section>
+
+<section id="alimentos">
+
+<h2>🍎 Alimentos que dependem das abelhas</h2>
+
+<div class="cards">
+
+<div class="card">🍓 Morango</div>
+
+<div class="card">🍎 Maçã</div>
+
+<div class="card">☕ Café</div>
+
+<div class="card">🍉 Melancia</div>
+
+<div class="card">🥭 Manga</div>
+
+<div class="card">🥑 Abacate</div>
+
+</div>
+
+</section>
+
+<section id="curiosidades">
+
+<h2>📚 Curiosidades</h2>
+
+<ul>
+
+<li>🐝 Existem mais de 20 mil espécies de abelhas.</li>
+
+<li>🍯 Nem todas produzem mel.</li>
+
+<li>🌼 Algumas abelhas não possuem ferrão.</li>
+
+<li>🌎 Grande parte da agricultura depende da polinização.</li>
+
+</ul>
+
+</section>
+
+<section id="ameacas">
+
+<h2>⚠️ Ameaças às Abelhas</h2>
+
+<ul>
+
+<li>🚜 Uso excessivo de agrotóxicos.</li>
+
+<li>🌳 Desmatamento.</li>
+
+<li>🌡️ Mudanças climáticas.</li>
+
+<li>🏭 Poluição.</li>
+
+</ul>
+
+</section>
+
+<section id="ajudar">
+
+<h2>🌱 Como podemos ajudar?</h2>
+
+<ul>
+
+<li>🌼 Plantar flores.</li>
+
+<li>🚫 Evitar agrotóxicos.</li>
+
+<li>🌳 Preservar áreas verdes.</li>
+
+<li>🐝 Proteger as abelhas nativas.</li>
+
+</ul>
+
+</section>
+
+<section id="quiz">
+
+<h2>🎮 Quiz</h2>
+
+<p>
+
+Qual é a principal função das abelhas?
+
+</p>
+
+<button onclick="resposta(true)">Polinizar plantas</button>
+
+<button onclick="resposta(false)">Produzir leite</button>
+
+<button onclick="resposta(false)">Caçar insetos</button>
+
+<p id="resultadoQuiz"></p>
+
+</section>
+
+<section id="contato">
+
+<h2>📞 Deixe sua mensagem</h2>
+
+<label>
+
+Seu nome
+
+</label>
+
+<input
+type="text"
+id="nome">
+
+<button onclick="cumprimentar()">
+
+Enviar
+
+</button>
+
+<p id="saudacao"></p>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>
+
+Projeto desenvolvido para o Concurso Agrinho 2026 🌱🐝
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
