@@ -1,88 +1,66 @@
 # Agrinho2026
-🐝 Agro Forte, Futuro Sustentável
-
-A Importância das Abelhas para a Agricultura e o Meio Ambiente
-
-📖 Sobre o projeto
-
-Este projeto foi desenvolvido para o Concurso Agrinho 2026, com o tema "Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente".
-
-O objetivo do site é conscientizar as pessoas sobre a importância das abelhas para a agricultura, para a produção de alimentos e para a preservação da biodiversidade. Através de um site interativo, o visitante aprende como a polinização realizada pelas abelhas contribui para um futuro mais sustentável.
+🐝 Agro Forte, Futuro Sustentável: A Importância das Abelhas para a Agricultura e o Meio Ambiente
 
 ---
 
-🎯 Objetivo
+## 📖 Sobre o Projeto
 
-- Explicar a importância das abelhas para o meio ambiente.
-- Demonstrar como a polinização influencia a produção de alimentos.
-- Incentivar atitudes que ajudem na preservação das abelhas.
-- Utilizar tecnologias da programação para tornar o aprendizado mais interativo.
+Este projeto foi desenvolvido para o Concurso Agrinho 2026, com o tema **"Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente"**.
 
----
-
-🌱 Justificativa
-
-As abelhas desempenham um papel essencial na polinização de diversas plantas cultivadas e nativas. Sem elas, a produção de muitos alimentos seria reduzida, afetando diretamente a agricultura, a economia e o equilíbrio dos ecossistemas.
-
-Este projeto busca mostrar que proteger as abelhas é proteger também a vida, a natureza e o futuro da humanidade.
+O objetivo do site é conscientizar a comunidade sobre o papel fundamental das abelhas na agricultura, na garantia da produção de alimentos e na preservação da biodiversidade. Através de uma interface dinâmica e educativa, o visitante compreende como a polinização realizada pelas abelhas sustenta um futuro mais sustentável.
 
 ---
 
-💻 Tecnologias utilizadas
+## 🎯 Objetivos
 
-- HTML5
-- CSS3
-- JavaScript
-- GitHub
-- GitHub Pages
-
----
-
-✨ Funcionalidades
-
-- Menu de navegação entre as seções.
-- Modo escuro.
-- Quiz interativo.
-- Saudação personalizada ao visitante.
-- Interação com a polinização das flores.
-- Layout responsivo para celulares e computadores.
-- Efeitos visuais e animações.
+- Explicar a importância das abelhas e outros polinizadores para o meio ambiente.
+- Demonstrar, por meio de dados visuais, como as abelhas lideram a polinização no Brasil.
+- Incentivar práticas de preservação e convivência harmônica no campo e na cidade.
+- Aplicar tecnologias do desenvolvimento web para promover a educação ambiental de forma clara e acessível.
 
 ---
 
-📁 Estrutura do projeto
+## 🌱 Justificativa
 
-Projeto
+As abelhas desempenham um papel essencial na polinização de diversas culturas agrícolas e plantas nativas. Sem elas, a produção de alimentos seria drasticamente reduzida, impactando diretamente o agronegócio, a economia e o equilíbrio dos ecossistemas.
+
+Proteger as abelhas é garantir a segurança alimentar, a biodiversidade e o futuro do planeta.
+
+---
+
+## 💻 Tecnologias Utilizadas
+
+- **HTML5**: Estruturação semântica das páginas.
+- **CSS3**: Estilização responsiva, animações e gráfico cônico (pizza/rosca) em CSS puro.
+- **GitHub & GitHub Pages**: Versionamento e hospedagem da aplicação na web.
+
+---
+
+## ✨ Funcionalidades e Páginas
+
+- **Início & Sobre (`index.html`)**: Introdução ao projeto, contexto histórico e a relação entre polinização e agronegócio.
+- **Polinizadores em Dados (`grafico.html`)**: Representação visual do percentual de participação das abelhas e outros animais na polinização do Brasil.
+- **Ajuda & Dúvidas (`ajuda.html`)**: Central informativa com perguntas frequentes e canal para contato.
+- **Design Responsivo**: Adaptação visual fluida para celulares, tablets e computadores.
+
+---
+
+## 📁 Estrutura do Repositório
+
+```text
+Agrinho2026/
 │
 ├── index.html
+├── grafico.html
+├── ajuda.html
 ├── style.css
-├── script.js
-├── README.md
-└── img/
+└── README.md
 
----
-
-▶️ Como executar
-
-1. Faça o download ou clone este repositório.
-2. Abra o arquivo index.html em qualquer navegador.
-3. Navegue pelas seções e interaja com as funcionalidades do site.
-
----
-
-📚 Referências
-
-- EMBRAPA
-- Ministério da Agricultura e Pecuária
-- FAO (Organização das Nações Unidas para Alimentação e Agricultura)
-- APACAME (Associação Paulista de Apicultores Criadores de Abelhas Melíferas Europeias)
-
-As informações foram consultadas para pesquisa e adaptadas em texto autoral para este projeto.
-
----
-
-👩‍💻 Desenvolvimento
-
-Projeto desenvolvido para fins educacionais no Concurso Agrinho 2026.
-
-#agrinho2026
+​📚 Referências Consultadas
+​EMBRAPA (Empresa Brasileira de Pesquisa Agropecuária)
+​Atlas dos Insetos
+​Ministério da Agricultura e Pecuária
+​FAO (Organização das Nações Unidas para Alimentação e Agricultura)
+​As informações foram pesquisadas, analisadas e adaptadas em texto autoral para fins pedagógicos.
+​👩‍💻 Desenvolvimento
+​Projeto desenvolvido para fins educacionais no Concurso Agrinho 2026.
