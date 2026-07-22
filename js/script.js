@@ -21,6 +21,7 @@ function calcularQuiz() {
 
     const q1 = document.querySelector('input[name="q1"]:checked');
     const q2 = document.querySelector('input[name="q2"]:checked');
+    const divResultado = document.getElementById("resultado-quiz")
 
     if (!q1 || !q2) {
         alert("🐝 Bzzzz! Por favor, responda a todas as perguntas antes de enviar!");
@@ -38,7 +39,7 @@ function calcularQuiz() {
     const divResultado = document.getElementById("resultado-quiz");
     divResultado.style.display = "block";
 
-    if (pontuacao === totalPerguntas) {
+    if (pontuacao === 2) {
         divResultado.style.backgroundColor = "#e8f5e9";
         divResultado.style.color = "#1b5e20";
         divResultado.style.border = "2px solid #a5d6a7";
