@@ -15,102 +15,55 @@ botaoModo.addEventListener("click", function () {
 });
 
 
-// ================================
-// POLINIZAÇÃO
-// ================================
+function calcularQuiz() {
+    let pontuacao = 0;
+    const totalPerguntas = 2;
 
-const flor = document.getElementById("flor");
-const abelha = document.getElementById("abelha");
-const mensagem = document.getElementById("mensagemPolinizacao");
+    const q1 = document.querySelector('input[name="q1"]:checked');
+    const q2 = document.querySelector('input[name="q2"]:checked');
 
-flor.addEventListener("click", function () {
-
-    // Faz a abelha "voar"
-    abelha.style.transform = "translateX(120px)";
-
-    mensagem.innerHTML =
-    "🌸 Flor polinizada! Graças às abelhas, novos frutos poderão nascer.";
-
-    // Depois de 2 segundos a abelha volta
-    setTimeout(function(){
-
-        abelha.style.transform = "translateX(0px)";
-
-    },2000);
-
-});
-
-
-// ================================
-// QUIZ
-// ================================
-
-function resposta(correta){
-
-    const resultado = document.getElementById("resultadoQuiz");
-
-    if(correta){
-
-        resultado.innerHTML =
-        "🎉 Parabéns! Você acertou!";
-
-        resultado.style.color = "green";
-
-    }
-
-    else{
-
-        resultado.innerHTML =
-        "❌ Resposta incorreta. Tente novamente!";
-
-        resultado.style.color = "red";
-
-    }
-
-}
-
-
-// ================================
-// SAUDAÇÃO
-// ================================
-
-function cumprimentar(){
-
-    const nome = document.getElementById("nome").value;
-
-    const saudacao = document.getElementById("saudacao");
-
-    if(nome.trim() === ""){
-
-        saudacao.innerHTML =
-        "Digite seu nome primeiro.";
-
-        saudacao.style.color = "red";
-
+    if (!q1 || !q2) {
+        alert("🐝 Bzzzz! Por favor, responda a todas as perguntas antes de enviar!");
         return;
-
     }
 
-    saudacao.innerHTML =
-    "🐝 Olá, " + nome + "! Obrigado por visitar nosso projeto Agrinho 2026!";
+    if (q1.id === "q1b") {
+        pontuacao++;
+    }
 
-    saudacao.style.color = "green";
+    if (q2.id === "q2a") {
+        pontuacao++;
+    }
 
+    const divResultado = document.getElementById("resultado-quiz");
+    divResultado.style.display = "block";
+
+    if (pontuacao === totalPerguntas) {
+        divResultado.style.backgroundColor = "#e8f5e9";
+        divResultado.style.color = "#1b5e20";
+        divResultado.style.border = "2px solid #a5d6a7";
+        divResultado.innerHTML = `
+            <h2>👑 Incrível! 2/2 Acertos! 🐝✨</h2>
+            <p>Você é um verdadeiro Guardião das Abelhas e um perito em Agro Sustentável! 🌻🍯</p>
+        `;
+    } else if (pontuacao === 1) {
+        divResultado.style.backgroundColor = "#fffde7";
+        divResultado.style.color = "#f57f17";
+        divResultado.style.border = "2px solid #ffe082";
+        divResultado.innerHTML = `
+            <h2>🐝 Muito Bem! 1/2 Acerto! 🌸</h2>
+            <p>Você está no caminho certo! Que tal dar uma lida na nossa página inicial para virar um mestre? 📖</p>
+        `;
+    } else {
+        divResultado.style.backgroundColor = "#ffebee";
+        divResultado.style.color = "#c62828";
+        divResultado.style.border = "2px solid #ef9a9a";
+        divResultado.innerHTML = `
+            <h2>🐝 Ops! 0/2 Acertos! 🌻</h2>
+            <p>Sem problemas! As abelhinhas te convidam a ler o nosso site para aprender mais sobre elas! 🍯</p>
+        `;
+    }
+
+    // Rola a página suavemente até o resultado
+    divResultado.scrollIntoView({ behavior: 'smooth' });
 }
-
-
-// ================================
-// EFEITO NOS CARDS
-// ================================
-
-const cards = document.querySelectorAll(".card");
-
-cards.forEach(function(card){
-
-    card.addEventListener("click", function(){
-
-        alert("🍯 As abelhas são fundamentais para a produção deste alimento!");
-
-    });
-
-});

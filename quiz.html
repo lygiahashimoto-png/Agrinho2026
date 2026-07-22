@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz do Polinizador - PolinizaAgro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bee-decoration bee-1">🐝</div>
+    <div class="bee-decoration bee-2">🌸</div>
+    <div class="bee-decoration bee-3">🐝</div>
+
+    <header>
+        <nav>
+            <a href="index.html">Início & Sobre</a>
+            <a href="quiz.html">Quiz do Polinizador</a>
+            <a href="ajuda.html">Ajuda & Dúvidas</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>🐝 Quiz do Polinizador</h1>
+        <h2>O que você sabe sobre as Abelhas e o Agro? 🌻</h2>
+        <p>Teste seus conhecimentos respondendo com carinho às perguntas abaixo:</p>
+
+        <form id="quizForm">
+            <div class="question-block">
+                <h3>1. Qual é o principal benefício da polinização para as plantas?</h3>
+                <label class="option-label"><input type="radio" id="q1a" name="q1"> Destruir pragas nas folhas</label>
+                <label class="option-label"><input type="radio" id="q1b" name="q1"> Permitir a reprodução e formação de frutos e sementes</label>
+                <label class="option-label"><input type="radio" id="q1c" name="q1"> Aumentar a quantidade de água no solo</label>
+            </div>
+
+            <div class="question-block">
+                <h3>2. O que os agricultores podem fazer para proteger as abelhas?</h3>
+                <label class="option-label"><input type="radio" id="q2a" name="q2"> Plantar flores nativas e aplicar manejo correto de defensivos</label>
+                <label class="option-label"><input type="radio" id="q2b" name="q2"> Remover toda a vegetação ao redor da lavoura</label>
+                <label class="option-label"><input type="radio" id="q2c" name="q2"> Aumentar a iluminação noturna no campo</label>
+            </div>
+
+            <button type="button" onclick="calcularQuiz()">Enviar Respostas 🍯</button>
+        </form>
+
+        <div id="resultado-quiz"></div>
+    </main>
+
+    <footer>
+        <address>PolinizaAgro &copy; 2026 🐝</address>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
