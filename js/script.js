@@ -1,36 +1,59 @@
-function calcularQuiz() {
-    const q1 = document.querySelector('input[name="q1"]:checked');
-    const q2 = document.querySelector('input[name="q2"]:checked');
-    const divResultado = document.getElementById("resultado-quiz");
+document.addEventListener("DOMContentLoaded", function () {
+    // 1. Destaque e Animação do Menu Ativo
+    const links = document.querySelectorAll("nav a");
+    const paginaAtual = window.location.pathname.split("/").pop() || "index.html";
 
-    if (!q1 || !q2) {
-        alert("🐝 Bzzzz! Por favor, responda a todas as perguntas antes de enviar!");
-        return;
+    links.forEach(link => {
+        if (link.getAttribute("href") === paginaAtual) {
+            link.style.backgroundColor = "#ffca28";
+            link.style.color = "#3e2723";
+        }
+    });
+
+    // 2. Animações e Efeitos para a página "Polinizadores em Dados" (grafico.html)
+    const pieChart = document.querySelector(".pie-chart");
+    const centroGrafico = document.querySelector(".pie-center strong");
+
+    if (pieChart) {
+        // Efeito de entrada suave no gráfico redondo
+        pieChart.style.opacity = "0";
+        pieChart.style.transform = "scale(0.8)";
+        pieChart.style.transition = "all 0.8s ease-in-out";
+
+        setTimeout(() => {
+            pieChart.style.opacity = "1";
+            pieChart.style.transform = "scale(1)";
+        }, 150);
+
+        // Contador animado para a porcentagem das Abelhas (0% -> 66%)
+        if (centroGrafico) {
+            let contador = 0;
+            const meta = 66;
+            const duracao = 1500; // 1.5 segundos
+            const passo = duracao / meta;
+
+            const intervalo = setInterval(() => {
+                contador++;
+                centroGrafico.textContent = contador + "%";
+                if (contador >= meta) {
+                    clearInterval(intervalo);
+                }
+            }, passo);
+        }
     }
 
-    let pontuacao = 0;
+    // 3. Interatividade nos cards da legenda do gráfico
+    const itensLegenda = document.querySelectorAll(".chart-legend li");
 
-    if (q1.id === "q1b") pontuacao++;
-    if (q2.id === "q2a") pontuacao++;
+    itensLegenda.forEach(item => {
+        item.addEventListener("mouseenter", () => {
+            item.style.transform = "translateX(8px)";
+            item.style.transition = "transform 0.2s ease";
+            item.style.cursor = "pointer";
+        });
 
-    divResultado.style.display = "block";
-
-    if (pontuacao === 2) {
-        divResultado.style.backgroundColor = "#e8f5e9";
-        divResultado.style.color = "#1b5e20";
-        divResultado.style.border = "2px solid #a5d6a7";
-        divResultado.innerHTML = "<h2>👑 Incrível! 2/2 Acertos! 🐝✨</h2><p>Você é um verdadeiro Guardião das Abelhas e um perito em Agro Sustentável! 🌻🍯</p>";
-    } else if (pontuacao === 1) {
-        divResultado.style.backgroundColor = "#fffde7";
-        divResultado.style.color = "#f57f17";
-        divResultado.style.border = "2px solid #ffe082";
-        divResultado.innerHTML = "<h2>🐝 Muito Bem! 1/2 Acerto! 🌸</h2><p>Você está no caminho certo! Que tal dar uma lida na nossa página inicial para aprender mais? 📖</p>";
-    } else {
-        divResultado.style.backgroundColor = "#ffebee";
-        divResultado.style.color = "#c62828";
-        divResultado.style.border = "2px solid #ef9a9a";
-        divResultado.innerHTML = "<h2>🐝 Ops! 0/2 Acertos! 🌻</h2><p>Sem problemas! As abelhinhas te convidam a ler o nosso site para aprender mais sobre elas! 🍯</p>";
-    }
-
-    divResultado.scrollIntoView({ behavior: 'smooth' });
-}
+        item.addEventListener("mouseleave", () => {
+            item.style.transform = "translateX(0px)";
+        });
+    });
+});
