@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polinizadores - PolinizaAgro</title>
+    <title>Polinizadores em Dados - PolinizaAgro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,66 +24,30 @@
         <h1>🐝 Quem Mais Poliniza o Brasil?</h1>
         <h2>As abelhas garantem 66% da polinização no país! 🌻</h2>
 
-        <p>Sem elas, a biodiversidade e os nossos alimentos ficam em risco. Veja abaixo a participação de cada grupo de polinizadores:</p>
+        <p>Sem elas, a biodiversidade e os nossos alimentos ficam em risco. Veja no gráfico redondo a enorme participação das abelhas em relação aos outros animais:</p>
 
-        <!-- Gráfico Visual em Barras Estilizadas -->
+        <!-- Container do Gráfico Redondo + Legenda -->
         <div class="chart-card">
-            <h3>📊 Gráfico de Polinizadores no Brasil</h3>
-
-            <div class="bar-container highlight">
-                <div class="bar-info">
-                    <span>🐝 Abelhas</span>
-                    <strong>66%</strong>
+            <h3>📊 Gráfico da Polinização no Brasil</h3>
+            
+            <div class="pie-chart-wrapper">
+                <!-- Gráfico de Pizza Redondo em CSS -->
+                <div class="pie-chart">
+                    <div class="pie-center">
+                        <span>🐝<br>Abelhas<br><strong>66%</strong></span>
+                    </div>
                 </div>
-                <div class="bar-bg"><div class="bar-fill" style="width: 66%;"></div></div>
-            </div>
 
-            <div class="bar-container">
-                <div class="bar-info">
-                    <span>🦋 Borboletas</span>
-                    <strong>9,2%</strong>
-                </div>
-                <div class="bar-bg"><div class="bar-fill" style="width: 9.2%;"></div></div>
-            </div>
-
-            <div class="bar-container">
-                <div class="bar-info">
-                    <span>🦗 Outros</span>
-                    <strong>8%</strong>
-                </div>
-                <div class="bar-bg"><div class="bar-fill" style="width: 8%;"></div></div>
-            </div>
-
-            <div class="bar-container">
-                <div class="bar-info">
-                    <span>🪲 Besouros</span>
-                    <strong>5,2%</strong>
-                </div>
-                <div class="bar-bg"><div class="bar-fill" style="width: 5.2%;"></div></div>
-            </div>
-
-            <div class="bar-container">
-                <div class="bar-info">
-                    <span>🐝 Vespas</span>
-                    <strong>4,8%</strong>
-                </div>
-                <div class="bar-bg"><div class="bar-fill" style="width: 4.8%;"></div></div>
-            </div>
-
-            <div class="bar-container">
-                <div class="bar-info">
-                    <span>🐦 Aves</span>
-                    <strong>4,4%</strong>
-                </div>
-                <div class="bar-bg"><div class="bar-fill" style="width: 4.4%;"></div></div>
-            </div>
-
-            <div class="bar-container">
-                <div class="bar-info">
-                    <span>🪰 Moscas</span>
-                    <strong>2,4%</strong>
-                </div>
-                <div class="bar-bg"><div class="bar-fill" style="width: 2.4%;"></div></div>
+                <!-- Legenda do Gráfico -->
+                <ul class="chart-legend">
+                    <li><span class="color-box c-abelhas"></span> <strong>🐝 Abelhas:</strong> 66%</li>
+                    <li><span class="color-box c-borboletas"></span> <strong>🦋 Borboletas:</strong> 9,2%</li>
+                    <li><span class="color-box c-outros"></span> <strong>🦗 Outros:</strong> 8%</li>
+                    <li><span class="color-box c-besouros"></span> <strong>🪲 Besouros:</strong> 5,2%</li>
+                    <li><span class="color-box c-vespas"></span> <strong>🐝 Vespas:</strong> 4,8%</li>
+                    <li><span class="color-box c-aves"></span> <strong>🐦 Aves:</strong> 4,4%</li>
+                    <li><span class="color-box c-moscas"></span> <strong>🪰 Moscas:</strong> 2,4%</li>
+                </ul>
             </div>
 
             <small class="fonte-dados">Fonte: Atlas dos Insetos</small>
